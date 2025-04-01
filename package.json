@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@netlify/functions": "^3.0.4",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
+  }
+}
