@@ -10,7 +10,10 @@ const db = new sqlite3.Database("./users.db"); // Path to SQLite database
 // Enable CORS for all origins (or specify the React app's origin)
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow only your React app to make requests
+    origin: [
+      "http://localhost:3000",
+      "https://ebuhlanti-front-end-8ecc8ec58136.herokuapp.com",
+    ], // Allow only your React app to make requests
     methods: ["GET", "POST", "PUT", "DELETE"], // Allow only specific HTTP methods
     credentials: true, // Allow credentials like cookies to be sent
   })
