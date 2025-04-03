@@ -718,7 +718,7 @@ app.get("/getAllReceivables", (req, res) => {
 
 app.get("/getAllPayments", (req, res) => {
   // Query to get all payments from the database
-  const query = "SELECT * FROM payment";
+  const query = "SELECT * FROM payment order by payment_date";
 
   db.all(query, [], (err, rows) => {
     if (err) {
@@ -741,7 +741,7 @@ app.get("/getAllPayments", (req, res) => {
 
 app.get("/getAllPremiums", (req, res) => {
   // Query to get all payments from the database
-  const query = "SELECT * FROM premium";
+  const query = "SELECT * FROM premium order by payment_date";
 
   db.all(query, [], (err, rows) => {
     if (err) {
